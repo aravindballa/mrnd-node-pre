@@ -174,7 +174,7 @@ a img{
   position: relative;
   height: 400px;
   width: auto;
-  background-color: #f3f3f3;
+  background-color: #292929;
 }
 
 .logo-font {
@@ -187,6 +187,7 @@ a img{
 .android-slogan {
   font-size: 60px;
   padding-top: 160px;
+  color: white;
 }
 
 .android-sub-slogan {
