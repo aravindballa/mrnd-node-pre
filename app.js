@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var port = process.env.PORT || 3300;
 
 var app = express();
 var controller = require('./controllers/route');
@@ -16,6 +17,6 @@ app.get('/',function(req,res){
 //setting the controller (router)
 app.use('/', controller);
 
-app.listen(3300, function () {
+app.listen(port, function () {
   console.log("listening on port 3300");
 });
