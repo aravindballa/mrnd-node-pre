@@ -1,0 +1,158 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Mrnd Rest API</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <!-- logo image in title bar -->
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">GITHUB</a>
+            </nav>
+          </div>
+
+          <span class="android-mobile-title mdl-layout-title">
+            <!-- logo image in title bar -->
+          </span>
+
+        </div>
+      </div>
+
+      <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <!-- logo image in title bar -->
+        </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Github</a>
+        </nav>
+      </div>
+
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+        <div class="android-be-together-section mdl-typography--text-center">
+          <div class="logo-font android-slogan">REST API</div>
+          <div class="logo-font android-sub-slogan">a rest api for the leaderboard. just to check how they perform.</div>
+
+
+          <a href="#calls">
+            <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+              <i class="material-icons">expand_more</i>
+            </button>
+          </a>
+        </div>
+        <div class="android-screen-section mdl-typography--text-center">
+          <a name="calls"></a>
+          <div class="mdl-typography--display-1-color-contrast">Complete API calls list</div>
+          <div class="mdl-layout__content">
+            <p class="mdl-typography--font-light mdl-typography--subhead">For all the API calls, you have to append <code>/api</code> to the URL and then use these.</p>
+
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric">Method</th>
+                  <th class="mdl-data-table__cell--non-numeric">Call</th>
+                  <th class="mdl-data-table__cell--non-numeric">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">GET</td>
+                  <td class="mdl-data-table__cell--non-numeric"><pre>/all</pre></td>
+                  <td class="mdl-data-table__cell--non-numeric">Returns a JSON array of all the students.</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">GET</td>
+                  <td class="mdl-data-table__cell--non-numeric"><pre>/stud/:rank</pre></td>
+                  <td class="mdl-data-table__cell--non-numeric">Returns a student of a particular rank.</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">POST</td>
+                  <td class="mdl-data-table__cell--non-numeric"><pre>/stud/</pre></td>
+                  <td class="mdl-data-table__cell--non-numeric">Adds a new student. Should be in the same structure that you get from the <code>GET</code> call.</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">DELETE</td>
+                  <td class="mdl-data-table__cell--non-numeric"><pre>/stud/:rank</pre></td>
+                  <td class="mdl-data-table__cell--non-numeric">Removes a particular student from the list.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <footer class="android-footer mdl-mega-footer">
+          <div class="mdl-mega-footer--top-section">
+            <div class="mdl-mega-footer--left-section">
+              <button class="mdl-mega-footer--social-btn"></button>
+              &nbsp;
+              <button class="mdl-mega-footer--social-btn"></button>
+              &nbsp;
+              <button class="mdl-mega-footer--social-btn"></button>
+            </div>
+            <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+            </div>
+          </div>
+
+          <div class="mdl-mega-footer--middle-section">
+            <p class="mdl-typography--font-light">Developed by Aravind Balla.</p>
+          </div>
+
+        </footer>
+      </div>
+    </div>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  </body>
+</html>
